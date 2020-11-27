@@ -3,7 +3,6 @@ import Dexie from 'dexie';
 import { API_Key } from './models';
 import { HttpClient } from '@angular/common/http';
 
-
 @Injectable()
 export class IndexedDatabase extends Dexie {
 

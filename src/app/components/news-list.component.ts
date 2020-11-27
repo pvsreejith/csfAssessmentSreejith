@@ -47,13 +47,6 @@ export class NewsListComponent implements OnInit {
       })
   }
 
-
-
   }
 
-    
-
-
-  }
-
-}
+  
