@@ -1,11 +1,23 @@
-export interface SearchOption {
-    id?: number;
-    q: string;
-    
+
+export interface API_Key {
+    apiKey: any;
   }
 
-  export interface SearchResult {
-    image: string
-    title: string
-    synopsis: string
+ 
+
+  export interface CountryList {
+    name: string;
+    alpha2Code: string;
+    flag: string;
+  }
+
+  export interface NewsArticle {
+  source: string
+  author: string
+  title: string
+  description: string
+  url: string
+  image: string
+  published: string
+  content: string
   }

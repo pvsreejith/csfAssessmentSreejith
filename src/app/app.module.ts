@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ServicesService } from './services.service';
 
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main.component';
-import { SearchComponent } from './components/search.component';
-
+import { CountryComponent } from './components/country.component';
+import { IndexedDatabase } from './indexed.database';
+import { NewsListComponent } from './components/news-list.component';
 
 const ROUTES: Routes = [
   { path: '', component: MainComponent },
-  { path: 'search', component: SearchComponent },
+  { path: 'country', component: CountryComponent },
+  { path: 'newsList', component: NewsListComponent },
+  
   { path: '**', redirectTo: '/', pathMatch: 'full' }
 ]
 
@@ -21,7 +23,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     MainComponent,
-    SearchComponent
+    CountryComponent,
+    NewsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES), 
     HttpClientModule,
   ],
-  providers: [ServicesService],
+  providers: [IndexedDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
